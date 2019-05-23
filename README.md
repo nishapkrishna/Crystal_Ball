@@ -12,6 +12,8 @@ Tools/Languages used: MySQL, Mongo DB, Python, Pandas, JavaScript, HTML, CSS, Fl
  2) Linear Regression
  
  3) Random Forest Classification
+ 
+ ![alt text](https://github.com/nishapkrishna/Crystal_Ball/blob/master/CinematicCrystalBall(EDB)/static/assets/Genras_by_ROI.png)
 
 
 
