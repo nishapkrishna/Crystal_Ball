@@ -7,9 +7,11 @@ Tools/Languages used: MySQL, Mongo DB, Python, Pandas, JavaScript, HTML, CSS, Fl
  
  Methods used to perform analysis:
 
- DeepLearning
- Linear Regression
- Random Forest Classification
+ 1) DeepLearning
+ 
+ 2) Linear Regression
+ 
+ 3) Random Forest Classification
 
 
 
