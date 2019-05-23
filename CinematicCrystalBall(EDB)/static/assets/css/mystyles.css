@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+width: 100%;
+height: 100%;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+        /* color: #FFFFFF;
+        background-color: rgba(226, 214, 206, 0.945); */
+    margin-bottom: 0;
+    border-radius: 0;
+}
+    
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px;
+  position: relative;
+  height: 550px;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Set gray background color and 100% height */
+/* .sidenav {
+padding-top: 20px;
+height: 100%;
+} */
+.mainlink{
+    color : black;
+}
+a {
+    color: black;
+    z-index: 1;
+}
+h1, h3, p{
+    color:black ;
+    z-index: 1;
+}
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+/* @media screen and (max-width: 767px) {
+.sidenav {
+    height: auto;
+    padding: 15px;
+} */
+.row.content {height:auto;}
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+#slideshow {
+  height: 500px;
+}
+
+#canvas {
+  height: 250px
+}
+
+@media screen and (max-height: 450px) {
+  #slideshow {padding-top: 15px;}
+  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.hero {
+    position: relative;
+    background-size: cover;
+    height: 100%;
+    padding: 20px;
+    margin: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+   
+}
+  .hero h1 {
+    margin-top: 200px;
+    color: white;
+    text-shadow: 2px 2px rgb(10, 10, 10);
+    font-size: 0.1rem;
+    animation: title 1.2s forwards linear;
+  }
+  
+  .hero p {
+    font-size: 2.1rem;
+    color: white;
+    text-shadow: 4px 4px rgb(10, 10, 10);
+    opacity: 0;
+    animation: subtitle 1.2s forwards linear;
+    animation-delay: 1.2s;
+  }
+
+.hero h2 {
+    font-size: 2.1rem;
+    color: white;
+    text-shadow: 4px 4px rgb(14, 13, 13);
+    opacity: 0;
+    animation: subtitle 1.2s forwards linear;
+    animation-delay: 1.2s;
+  }
+
+  .hero h4 {
+    font-size: 2.1rem;
+    color: white;
+    text-shadow: 4px 4px rgb(14, 13, 13);
+    opacity: 0;
+    animation: subtitle 1.2s forwards linear;
+    animation-delay: 1.2s;
+  }
+
+  .btn {
+    height: 35px;
+    margin-top: 25px;
+  }
+
+  .directions h3 {
+    color: white
+  }
+
+  @keyframes title {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      font-size: 6.5rem;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes smaller-title {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      font-size: 6.5rem;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes subtitle {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+        font-size: 2.1rem;
+      opacity: 1;
+    }
+  }
+
+.flexwrapper {display:flex;}
+
+.autocomplete { 
+  align-items:flex-start;
+}
+.cf-medium {width:97%;}
+
+#viz-main {
+  padding: 25px 40px 30px 40px;
+  width:65%;
+ }
+
+ .cover {
+   width: 200px;
+   object-fit: cover;
+ }
+
+
+.row.row-grid [class*="col-"] + [class*="col-"] {
+    margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+    .row.row-grid [class*="col-lg-"] + [class*="col-lg-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 992px) {
+    .row.row-grid [class*="col-md-"] + [class*="col-md-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 768px) {
+    .row.row-grid [class*="col-sm-"] + [class*="col-sm-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 768px) {
+  .row.row-grid [class*="col-xs-"] + [class*="col-xs-"] {
+      margin-top: 0;
+  }
+}
+
+#landing-viz {
+  padding:20px 20px 20px 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.figure:active{
+  border: 5px solid lightblue;
+}
+
+.box {
+  color:black;
+  background: whitesmoke;
+}
+
+.box-left {
+  padding: 20px;
+}
+
+.box-right {
+  padding: 30px;
+}
+
+.box-single {
+  padding: 50px;
+  margin: 70px;
+}
+@media (min-width: 320px) {
+  .hero::before {
+  background-image: url(/img/background-1932466_1920-460x305.jpg);
+  }
+  }
+  
+  @media (min-width: 460px) {
+  .hero::before {
+  background-image: url(/img/background-1932466_1920-720x477.jpg);
+  }
+  }
+  
+  @media (min-width: 720px) {
+  .hero::before {
+  background-image: url(/img/background-1932466_1920-980x649.jpg);
+  }
+  }
+  
+  @media (min-width: 980px) {
+  .hero::before {
+  background-image: url(/img/background-1932466_1920-1240x821.jpg);
+  }
+  }
+  
+  @media (min-width: 1240px) {
+  .hero::before {
+  background-image: url(/img/background-1932466_1920-1500x993.jpg);
+  }
+  }
+  
+  @media (min-width: 1500px) {
+  .hero::before {
+  background-image: url(/img/background-1932466_1920-1760x1166.jpg);
+  }
+  }
+  
+  @media (min-width: 1760px) {
+  .hero::before {
+  background-image: url(/img/background-1932466_1920-1920x1271.jpg);
+  }
+  }
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Film Investor Guide</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/assets/css/mystyles.css">
+
+  <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+</head>
+
+<body onload="slider()">
+  
+
+   <!-- html for side navigation bar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- <img src="../static/assets/logo.png" alt="logo" align="left" width="75" height="75"> -->
+
+          <!-- flask routes -->
+        <a href="/">Home</a>
+        <a href="/visualizations" class = "mainlink">Visualizations</a>
+        <a href="/fun" class = "mainlink">Fun Facts</a>       
+        <!-- <a href="/explore" class = "mainlink">Explore</a> -->
+        <a href="/crystal" class = "mainlink">Crystal Ball</a>
+        <!-- <a href="/data" class = "mainlink">Data</a>  -->
+        <a href="/process" class = "mainlink">Process Flow</a>        
+        <a href="/about" class = "mainlink">About</a>
+        <a href="/acknowledgments" class = "mainlink">Acknowledgments</a>        
+    </div>
+   
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+  <div class="row content">                          
+      <div class="col-sm-12 text-left">
+          <div class="panel panel-default">
+              <div class="panel-body">
+
+                      <h1>Exploring Movie Data with Interactive Visualizations</h1>
+                      
+                      <hr>
+                      <div class="row">
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                              <p>Want to know some fun facts?</p>
+                                <p>1.Top movie by ROI ever</p>
+                                <p>2.Top box office collection movie ever</p>
+                                <p>3.Best director by popularity</p>
+            
+                            <p><img src="static/assets/table.png" align="top" width="900" height="100"> </p>
+                             
+                          </div>
+                          <!-- Test slide show -->
+                          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+                          <link rel="stylesheet" type="text/css" href="mystyles.css">
+                            <img id="slideshow">
+                            <script>
+                                var i = 0;
+                                function change_image(){
+                                document.getElementById("slideshow").src = "static/assets/slideshow/img"+(i++ % 6)+".jpg";
+                                }
+                                function slider(){
+                                    setInterval(change_image, 3700);
+                                }
+                                </script>
+                          
+                      </div>
+              <!-- </div>
+          </div>
+      </div>
+  </div>
+</div>                       -->
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Film Investor Guide</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/assets/css/mystyles.css">
+
+  <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+</head>
+
+<body >
+  
+
+   <!-- html for side navigation bar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- <img src="../static/assets/logo.png" alt="logo" align="left" width="75" height="75"> -->
+
+          <!-- flask routes -->
+          <a href="/">Home</a>
+          <a href="/visualizations" class = "mainlink">Visualizations</a>
+          <a href="/fun" class = "mainlink">Fun Facts</a>       
+          <!-- <a href="/explore" class = "mainlink">Explore</a> -->
+          <a href="/crystal" class = "mainlink">Crystal Ball</a>
+          <!-- <a href="/data" class = "mainlink">Data</a> -->
+          <a href="/process" class = "mainlink">Process Flow</a>            
+          <a href="/about" class = "mainlink">About</a>
+          <a href="/acknowledgments" class = "mainlink">Acknowledgments</a>      
+    </div>
+   
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+<div >
+    <h4>{{rfresult}}</h4>
+    <h4>{{lrresult}}</h4>
+    <!-- <h4>{{nnresult}}</h4> -->
+
+    <!-- <table>
+      <tr>
+        <td>Movie Genres</td>
+        <td>Director</td>
+        <td>Actor</td>
+      </tr> 
+      <tr>  
+        <td><input type="text" id="genInput1"/></td>
+        <td><input type="text" id="dirInput1"/></td>
+        <td><input type="text" id="actInput1"/></td>
+      </tr>
+      <tr>  
+        <td><input type="text" id="genInput2"/></td>
+        <td><input type="text" id="dirInput2"/></td>
+        <td><input type="text" id="actInput2"/></td>
+      </tr> 
+      <tr>  
+        <td><input type="text" id="genInput3"/></td>
+        <td><input type="text" id="dirInput3"/></td>
+        <td><input type="text" id="actInput3"/></td>
+      </tr>
+      <tr>  
+        <td><input type="text" id="genInput4"/></td>
+        <td><input type="text" id="dirInput4"/></td>
+        <td><input type="text" id="actInput4"/></td>
+      </tr>
+      <tr>  
+        <td><input type="text" id="genInput5"/></td>
+        <td><input type="text" id="dirInput5"/></td>
+        <td><input type="text" id="actInput5"/></td>
+      </tr>   
+
+    </table> -->
+    <!-- <h2>More Explore</h2> -->
+    <p><a href="/crystal" class = "mainlink">Crystal Ball</a></p>
+
+</body>
+</html>
+    

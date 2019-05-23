@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Film Investor Guide</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/assets/css/mystyles.css">
+
+  <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+</head>
+
+<body>
+  
+
+   <!-- html for side navigation bar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- <img src="../static/assets/logo.png" alt="logo" align="left" width="75" height="75"> -->
+
+          <!-- flask routes -->
+        <a href="/">Home</a>
+        <a href="/visualizations" class = "mainlink">Visualizations</a>
+        <a href="/fun" class = "mainlink">Fun Facts</a>       
+        <!-- <a href="/explore" class = "mainlink">Explore</a> -->
+        <a href="/crystal" class = "mainlink">Crystal Ball</a>
+        <!-- <a href="/data" class = "mainlink">Data</a>  -->
+        <a href="/process" class = "mainlink">Process Flow</a>        
+        <a href="/about" class = "mainlink">About</a>
+        <a href="/acknowledgments" class = "mainlink">Acknowledgments</a>        
+    </div>
+   
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+<!-- Try dashboard appearance -->
+<h2>Exploring Movie Data with Interactive Visualizations</h2>
+<br>
+<br>
+
+
+<div class="container">
+  <div class="row row-grid">
+      <div class="col-md-8">
+          <div class="box box-left">
+              <section id="intro">
+                
+                  <h3>Documentary Popularity over Time (1970-2017)</h3>
+                  <hr>
+                  <figure>
+                      <a target="_blank" href="../static/assets/Docu_Popularity.png">
+                      <img id="viz-main" src="../static/assets/Docu_Popularity.png" alt="Documentary Popularity over Time">  
+                      </a>
+                  </figure>
+
+                  <section id="summary">
+                      <h4><b>Key Observation:</b> The mid 90’s seemed to be the golden age of documentaries.</h4>
+
+                  </section>
+
+              </section>
+          </div>
+      </div>
+
+      <!-- Thumbnail gallery of other visualizations to the right of Summary -->
+      <div class="col-md-4 sidebar">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Visualizations</h3>
+            </div>
+          </div>  
+  
+              <div class="row">
+                  
+                  <div class="col-md-3">
+                      <a href="/chart3D"><img src="../static/assets/3D.png" width="150px" height="150px"></a>
+                      </div>
+                      <div class="col-md-3"></div>
+  
+                      <div class="col-md-3">
+                          <a href="/adventure"><img src="../static/assets/Adven_Popularity.png" width="150px" height="150px"></a>
+                      </div>
+                      <div class="col-md-3"></div>
+                  </div>
+                  <div class ="row">     
+                      <div class="col-md-3">
+                          <a href="/genreROI"><img src="../static/assets/Genras_by_ROI.png" width="150px" height="150px"></a>
+                      </div>
+                      <div class="col-md-3"></div>
+                      
+                      <div class="col-md-3">
+                          <a href="/pie"><img src="../static/assets/piechart.png" width="150px" height="150px"></a>
+                      </div> 
+                  </div>    
+          
+      </div>
+     <div class="col-md-1"></div>  
+  
+  </div>
+  </div>
+
+      
+      
+      </body>
+      </html>

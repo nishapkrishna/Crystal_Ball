@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Film Investor Guide</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/assets/css/mystyles.css">
+
+  <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+</head>
+
+<body >
+  
+
+   <!-- html for side navigation bar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- <img src="../static/assets/logo.png" alt="logo" align="left" width="75" height="75"> -->
+
+          <!-- flask routes -->
+          <a href="/">Home</a>
+          <a href="/visualizations" class = "mainlink">Visualizations</a>
+          <a href="/fun" class = "mainlink">Fun Facts</a>       
+          <!-- <a href="/explore" class = "mainlink">Explore</a> -->
+          <a href="/crystal" class = "mainlink">Crystal Ball</a>
+          <a href="/process" class = "mainlink">Process Flow</a>         
+          <a href="/about" class = "mainlink">About</a>
+          <a href="/acknowledgments" class = "mainlink">Acknowledgments</a>
+    </div>
+   
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+<div >
+  <!--Make sure the form has the autocomplete function switched off:-->
+  <form class="flexwrapper" autocomplete="off" method="POST" action="/crystal" role="form" name="crewform">
+    <div class="autocomplete" style="width:300px;">
+      <label for="input">Movie Genres</label>
+      <input id="genInput1" type="text" name="genInput1" placeholder="Choose Genre(s)" class="form-control">
+      <input id="genInput2" type="text" name="genInput2" placeholder="Choose Genre(s)" class="form-control">
+      <input id="genInput3" type="text" name="genInput3" placeholder="Choose Genre(s)" class="form-control">
+      <input id="genInput4" type="text" name="genInput4" placeholder="Choose Genre(s)" class="form-control">
+      <input id="genInput5" type="text" name="genInput5" placeholder="Choose Genre(s)" class="form-control">
+      </div>
+      <!-- <input type="submit"> -->
+      
+     <div class="autocomplete" style="width:300px;"> 
+      <label for="input">Director</label>
+      <input id="dirInput1" type="text" name="dirInput1" placeholder="Choose Director(s)" class="form-control">
+      <input id="dirInput2" type="text" name="dirInput2" placeholder="Choose Director(s)" class="form-control">
+      <input id="dirInput3" type="text" name="dirInput3" placeholder="Choose Director(s)" class="form-control">
+      <input id="dirInput4" type="text" name="dirInput4" placeholder="Choose Director(s)" class="form-control">
+      <input id="dirInput5" type="text" name="dirInput5" placeholder="Choose Director(s)" class="form-control">
+  
+      <!-- <input type="submit"> -->
+     <!-- </div>
+     <div class="autocomplete" style="width:300px;"> 
+      <label for="input">Director2</label>
+       -->
+      
+      <!-- <input type="submit"> -->
+     </div>
+    
+      <div class="autocomplete" style="width:300px;"> 
+        <label for="input">Actor</label>
+        <input id="actInput1" type="text" name="actInput1" placeholder="Choose Actor(s)" class="form-control">
+        <input id="actInput2" type="text" name="actInput2" placeholder="Choose Actor(s)" class="form-control">
+        <input id="actInput3" type="text" name="actInput3" placeholder="Choose Actor(s)" class="form-control">
+        <input id="actInput4" type="text" name="actInput4" placeholder="Choose Actor(s)" class="form-control">
+        <input id="actInput5" type="text" name="actInput5" placeholder="Choose Actor(s)" class="form-control">
+        <!-- <input type="submit"> -->
+      </div>
+  
+      <div class="autocomplete" style="width:300px;"> 
+        <label for="input">Budget</label>
+        <select name=budgetbin class="form-control">
+            <!-- Placeholder for dropdown -->
+            <option value="" disabled selected> Select your option</option>
+            <!-- dropdown options for budget bins -->
+            <option value="0"><$100,000</option>
+            <option value="1">$100,001-$10,000,000</option>
+            <option value="2">>$10,000,000</option>
+            
+        </select>
+        <br>  
+      </div>
+        <!-- <input id="myInput" type="text" name="myCountry" placeholder="Country"> -->
+        <input type="submit" value="submit" class="btn btn-primary" style="width:100px"> 
+        
+    
+      
+    </div>
+  </div>  
+  
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <!-- <div id="main"> -->
+        <div class="container-fluid text-center">    
+            <div class="row content">
+              <div class="col-xs-12 text-center" >
+                  <div class="hero">
+                    <style>
+                        div {
+                          display: block;
+                          position: relative;
+                          height: 75%;
+                        }
+                        .hero::after {
+                          content: "";
+                          background: url(../static/assets/directorschair.jpg);
+                          background-size: cover;
+                          opacity: 2.0;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          position: absolute;
+                          z-index: -1;  
+                          background-repeat: no-repeat; 
+                        }
+                      </style>
+
+<br>
+  <div class="directions" >
+  <h3>Enter inputs such as "Genre", "Director", "Actor", for analysis.</h3>
+  </div>
+<!-- </div> -->
+
+
+  
+ 
+  <div>
+    
+  </div>
+  
+</form>
+
+
+<script src="../static/js/populate_dropdowns.js">
+
+</script>
+
+
+
+
+    
+
+</body>
+</html

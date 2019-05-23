@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Film Investor Guide</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/assets/css/mystyles.css">
+
+  <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+</head>
+
+<body>
+  
+
+   <!-- html for side navigation bar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- <img src="../static/assets/logo.png" alt="logo" align="left" width="75" height="75"> -->
+
+          <!-- flask routes -->
+        <a href="/">Home</a>
+        <a href="/visualizations" class = "mainlink">Visualizations</a>
+        <a href="/fun" class = "mainlink">Fun Facts</a>       
+        <!-- <a href="/explore" class = "mainlink">Explore</a> -->
+        <a href="/crystal" class = "mainlink">Crystal Ball</a>
+        <a href="/process" class = "mainlink">Process Flow</a>         
+        <a href="/about" class = "mainlink">About</a>
+        <a href="/acknowledgments" class = "mainlink">Acknowledgments</a>        
+    </div>
+   
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+    <div class="container-fluid text-center">    
+    <div class="row content">
+        <div class="col-sm-12 text-left" >
+
+                <div id="main">
+                        <div class="container-fluid text-center">    
+                            <div class="row content">
+                              <div class="col-xs-12 text-center" >
+                                  <div class="hero">
+                                    <style>
+                                        div {
+                                          display: block;
+                                          position: relative;
+                                          height: 50%;
+                                        }
+                                        .hero::after {
+                                          content: "";
+                                          background: url(../static/assets/machine-learning-process.png);
+                                          background-size: cover;
+                                          opacity: 2.0;
+                                          top: 0;
+                                          left: 0;
+                                          bottom: 0;
+                                          right: 0;
+                                          position: absolute;
+                                          z-index: -1;  
+                                          background-repeat: no-repeat; 
+                                        }
+                                      </style> 
+        <!-- <div class="hero text-center">
+        <h1>Acknowledgments</h1>
+        <br>
+        <h2>*****</h2>
+
+        <h4>Team <strong>FuzzyWuzzy</strong> would like to give special thanks to the University of MN Data Analytics and Visualization Boot Camp teaching and support staff.</h4> 
+                <h4>Dion Song</h4>
+                <h4>Catherine Wegner</h4>
+                <h4>Seth Kelly</h4>
+                <h4>Owen Murray</h4>
+                <br>
+                <p>The gifts of your time, patience, and expertise have equipped us with new skills, habits, and confidence in our ability to flourish in the field of Data Science.
+                <br>
+                <p>Thank you, also, to Cohort 2 (the best cohort in the program). We can’t think of a better group of people to have spent 10 hours a week with for the last 6 months. 
+                Best wishes for the future!
+                </p>
+
+        </div> -->
+    </div>
+    </div>
+
+</body>
+</html>

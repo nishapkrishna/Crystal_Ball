@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Film Investor Guide</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/assets/css/mystyles.css">
+
+  <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+</head>
+
+<body>
+  
+
+   <!-- html for side navigation bar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- <img src="../static/assets/logo.png" alt="logo" align="left" width="75" height="75"> -->
+
+          <!-- flask routes -->
+        <a href="/">Home</a>
+        <a href="/visualizations" class = "mainlink">Visualizations</a>
+        <a href="/fun" class = "mainlink">Fun Facts</a>       
+        <!-- <a href="/explore" class = "mainlink">Explore</a> -->
+        <a href="/crystal" class = "mainlink">Crystal Ball</a>
+        <!-- <a href="/data" class = "mainlink">Data</a>     -->
+        <a href="/process" class = "mainlink">Process Flow</a>     
+        <a href="/about" class = "mainlink">About</a>
+        <a href="/acknowledgments" class = "mainlink">Acknowledgments</a>        
+    </div>
+   
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+        <div class="container-fluid text-center">    
+            <div class="row content">
+              <div class="col-xs-12 text-center" >
+                  <div class="hero">
+                    <style>
+                        div {
+                          display: block;
+                          position: relative;
+                          height: 100%;
+                        }
+                        .hero::before {
+                          content: "";
+                          background: url(../static/assets/filmstrip2.jpg);
+                          background-size: cover;
+                          opacity: 0.8;
+                          top: 0;
+                          left: 0;
+                          bottom: 0;
+                          right: 0;
+                          position: absolute;
+                          z-index: -2;  
+                          background-repeat: no-repeat; 
+                        }
+                      </style> -->
+
+                      <div class="container-fluid text-center">    
+                        <div class="row content">
+                          <div class="col-sm-12 text-center" > 
+                            <h1>Team FuzzyWuzzy</h1>
+                            <br>
+                            <hr>
+
+                            <style>
+                                [class*="col-md-"] {
+                                       border:0px solid #ddd;
+                                    }
+                                </style>
+                                 
+                                <div class="container">
+                                  <div class="row">
+                                      <div class="col-md-2 col-md-offset-1">
+                                      <img src="../static/assets/nisha.jpg" alt="Nisha" width="151px"/>
+                                    <h4><strong>President and CEO:</strong> Nisha Krishnankutty</h4>
+                                    <p>...</p>         
+                                    <p>Code Whisperer</p>
+                                    <p>Data Miner</p>
+                                    <p>Visionary</p>
+                                    
+                                    </div>
+                                      <div class="col-md-2">
+                                      <img src="../static/assets/anupa.jpg" alt="Anupa" width="145px"/>
+                                      <h4><b>Chief Operating Officer:</b> Anupa Jose</h4>
+                                      <p>...</p>       
+                                      <p>Java Scriptor</p>
+                                      <p>Code Beautifier</p>
+                                      <p>Metadata Maven</p>
+                                    
+                                    
+                                    </div>
+                                      <div class="col-md-2">
+                                      <img src="../static/assets/EDB.jpg" alt="Eyamba" width="174px"/>
+                                    <h4><b>Director of Operations:</b> Eyamba David Bokamba</h4>
+                                    <p>...</p> 
+                                      <p>Visualizer</p>
+                                      <p>ETL Fanatic</p>
+                                      <p>Mongo Master</p>
+                                    </div>
+                                      <div class="col-md-2">
+                                          <img src="../static/assets/nandu3.jpg" alt="Nandu" width="158px"/>
+                                          <h4><b>Chief Technical Officer:</b> Venkateshwaran "Nandu" Iyer</h4>
+                                          <p>...</p>          
+                                          <p>Developer</p>
+                                          <p>Model Builder</p>
+                                          <p>Data Cleanser</p>
+                                    
+                                    </div>
+                                      <div class="col-md-2">
+                                          <img src="../static/assets/abe.jpg" alt="Abe" width="174px" align="center"/>
+                                          <h4><b>Dir. of Marketing and Public Relations:</b> Abe Rizvi</h4>
+                                          <p>...</p>         
+                                          <p>Debugger</p>
+                                          <p>Conda Creator</p>
+                                          <p>Pip Installer</p>
+                                    
+                                    </div>
+                                    </div>
+                                 
+                                </div>
+    
+      
+
+  
+  
+
+</body>
+</html>
